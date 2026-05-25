@@ -68,7 +68,8 @@ export function useCountdown(
     }
     setSecondsLeft(newSeconds);
     setIsPaused(false);
-  }, []);
+    startInterval();
+  }, [startInterval]);
 
   useEffect(() => {
     reset(initialSeconds);
